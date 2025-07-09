@@ -2,62 +2,72 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEEP Newton Sucupira - Atualizações</title>
-  <link rel="stylesheet" href="/css/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <title>Atualizações | CEEP Newton Sucupira</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/atualizacoes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
   <header>
     <nav class="container">
       <a href="../index.html" class="logo">
-        <img src="/img/logoNewtonSuc.png" alt="Logo CEEP Newton Sucupira" />
+        <img src="../img/logoNewtonSuc.png" alt="Logo CEEP Newton Sucupira" />
       </a>
       <ul class="nav-links">
-        <li><a href="../index.html" class="active">Home</a></li>
-        <li><a href="../view/atualizacoes.html">Atualizações</a></li>
-        <li><a href="../view/arrecadacoes.html">Ações</a></li>
-        <li><a href="../view/informacoes.html">Informações</a></li>
-        <li><a href="../view/vendas.html" class="btn">Login do Terceirão</a></li>
+        <li><a href="index.html">Principal</a></li>
+        <li><a href="../atualizacoes.html">Atualizações</a></li>
+        <li><a href="../arrecadacoes.html">Ações</a></li>
+        <li><a href="../informacoes.html">Informações</a></li>
+        <li><a href="../vendas.html" class="butao active">Login do Terceirão</a></li>
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-      </div>
+      <div class="dark-mode-toggle">
+  <input type="checkbox" id="darkModeToggle" />
+  <label for="darkModeToggle" class="switch" title="Alternar modo escuro">
+    <span class="slider round"></span>
+  </label>
+</div>
+
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Atualizações</h1>
-    <article class="atualizacao">
-      <h2>Última Reunião da Comissão</h2>
-      <p>Na última semana, discutimos detalhes finais sobre os convites e decoração.</p>
-    </article>
-    <article class="atualizacao">
-      <h2>Eventos de Arrecadação</h2>
-      <p>Fique ligado nos próximos eventos para ajudar na arrecadação de fundos.</p>
-    </article>
-    <article class="atualizacao">
-      <h2>Novas Parcerias</h2>
-      <p>Firmamos parcerias com novas universidades para aumentar nossos patrocinadores.</p>
-    </article>
+  <main class="container main-content">
+    <h1>Atualizações da Formatura</h1>
+
+    <section class="atualizacoes-list">
+      <article class="atualizacao-item">
+        <h2>10/07/2025 - Definido o Local da Cerimônia</h2>
+        <p>O salão principal do CEEP Newton Sucupira será o local oficial da cerimônia de formatura.</p>
+      </article>
+
+      <article class="atualizacao-item">
+        <h2>01/08/2025 - Início da Venda de Rifas</h2>
+        <p>A comissão iniciou a venda das rifas que ajudam a arrecadar fundos para a festa.</p>
+      </article>
+
+      <article class="atualizacao-item">
+        <h2>15/09/2025 - Lançamento das Camisetas Personalizadas</h2>
+        <p>Estão disponíveis para compra as camisetas do Terceirão com design exclusivo.</p>
+      </article>
+
+      <article class="atualizacao-item">
+        <h2>30/10/2025 - Confirmação do Cardápio do Almoço Beneficente</h2>
+        <p>O cardápio do almoço foi definido e será divulgado em breve para a comunidade.</p>
+      </article>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-content">
-      <div class="social-links">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-        <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
-        <a href="#"><i class="fa-regular fa-folder"></i></a>
+      <div class="footer-links">
+        <a href="quemsomos.html">Quem Somos</a>
+        <a href="politica.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
       </div>
-      <p>Desenvolvido por Ariel Ramos</p>
+      <p>&copy; 2025 CEEP Newton Sucupira — Todos os direitos reservados.</p>
     </div>
   </footer>
-<script src="js/script.js"></script>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
