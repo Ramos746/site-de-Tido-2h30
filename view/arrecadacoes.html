@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ações da Comissão | CEEP Newton Sucupira</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/arrecadacoes.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/arrecadacoes.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
@@ -17,61 +17,73 @@
       <ul class="nav-links">
         <li><a href="/index.html">Principal</a></li>
         <li><a href="/view/atualizacoes.html">Atualizações</a></li>
-        <li><a href="/view/arrecadacoes.html">Ações</a></li>
+        <li><a href="/view/arrecadacoes.html" class="active">Ações</a></li>
         <li><a href="/view/informacoes.html">Informações</a></li>
-        <li><a href="/view/vendas.html" class="butao active">Login do Terceirão</a></li>
+        <li><a href="/view/vendas.html" class="butao">Login do Terceirão</a></li>
       </ul>
       <div class="dark-mode-toggle">
-  <input type="checkbox" id="darkModeToggle" />
-  <label for="darkModeToggle" class="switch" title="Alternar modo escuro">
-    <span class="slider round"></span>
-  </label>
-</div>
+        <input type="checkbox" id="darkModeToggle" />
+        <label for="darkModeToggle" class="switch" title="Alternar modo escuro">
+          <span class="slider round"></span>
+        </label>
+        <i class="fa-solid fa-moon"></i>
+      </div>
     </nav>
   </header>
 
+<br> <br> <br> 
   <main class="container main-content">
-    <h1>Ações da Comissão</h1>
-    <p>Conheça as iniciativas e campanhas promovidas para ajudar na realização da formatura do Terceirão.</p>
-
-    <section class="acoes-list">
-      <article class="acao-item">
-        <h2>Campanha de Rifa</h2>
-        <p>Venda de rifas com prêmios incríveis para arrecadar fundos para a festa.</p>
-      </article>
-
-      <article class="acao-item">
-        <h2>Bazar Solidário</h2>
-        <p>Evento para venda de roupas e objetos doados, com toda renda destinada à formatura.</p>
-      </article>
-
-      <article class="acao-item">
-        <h2>Almoço Beneficente</h2>
-        <p>Almoço organizado com pratos típicos, aberto à comunidade, com renda revertida.</p>
-      </article>
-
-      <article class="acao-item">
-        <h2>Venda de Camisetas Personalizadas</h2>
-        <p>Camisetas do Terceirão com design exclusivo para venda aos alunos e familiares.</p>
-         <div class="comissao-img">
-        <img src="../img/confraFormados.png" alt="Foto da comissão" />
+    <section class="painel-acoes">
+      <h2>Painel de Arrecadações</h2>
+      <div class="painel-metas">
+        <div class="meta-box">
+          <i class="fa-solid fa-bullseye"></i>
+          <p>Meta Geral</p>
+          <p>R$ 12.000,00</p>
+        </div>
+        <div class="meta-box">
+          <i class="fa-solid fa-donate"></i>
+          <p>Total Arrecadado</p>
+          <p>R$ 7.580,00</p>
+        </div>
+        <div class="meta-box">
+          <i class="fa-solid fa-chart-line"></i>
+          <p>Progresso</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 63%;"></div>
+          </div>
+          <p>63% da meta atingida</p>
+        </div>
       </div>
-      </article>
 
+      <div class="acoes-andamento">
+        <h3>Ações em andamento</h3>
+        <ul>
+          <li><i class="fa-solid fa-ticket"></i> Rifa de prêmios</li>
+          <li><i class="fa-solid fa-tshirt"></i> Venda de camisetas</li>
+          <li><i class="fa-solid fa-hand-holding-heart"></i> Vaquinha online</li>
+          <li><i class="fa-solid fa-store"></i> Apoio de comércios locais</li>
+        </ul>
+      </div>
     </section>
   </main>
-
+<br> <br> <br> <br> <br>
   <footer>
     <div class="container footer-content">
       <div class="footer-links">
-        <a href="quemsomos.html">Quem Somos</a>
-        <a href="politica.html">Política de Privacidade</a>
-        <a href="termos.html">Termos de Uso</a>
+        <a href="view/quemsomos.html">Quem Somos</a>
+        <a href="view/politica.html">Política de Privacidade</a>
+        <a href="view/termos.html">Termos de Uso</a>
+      </div>
+      <div class="social-links">
+        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
       <p>&copy; 2025 CEEP Newton Sucupira — Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <script src="../js/script.js"></script>
+  <script src="/js/arrecadacoes.js"></script>
 </body>
 </html>
