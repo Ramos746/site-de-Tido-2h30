@@ -12,7 +12,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--fundo-claro);
@@ -30,6 +29,11 @@ header {
   background-color: var(--cor-primaria);
   color: #fff;
   padding: 1rem 0;
+  transition: box-shadow 0.3s ease;
+}
+
+header.header-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -38,36 +42,52 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
-.comissao-img img {
-  max-height: 300px;
-  width: auto;
-}
 
-.logo img,
-.logo svg {
-  height: 40px;
-}
 .logo {
-  display: inline-block;       
-  background-color: white;    
-  padding: 8px;            
-  border-radius: 50%;       
-  box-sizing: content-box; 
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  width: 50px;              
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  box-sizing: content-box;
 }
 
 .logo img {
-  width: 100%;              
+  width: 100%;
   height: auto;
+  border-radius: 50%;
+}
+.comissao-img img {
+  max-height: 300px;
+  width: auto;
   display: block;
-  border-radius: 50%;       
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  transform: scale(1);
 }
 
+.comissao-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -82,26 +102,52 @@ nav {
   border-radius: 4px;
   transition: background 0.2s;
 }
-
+nav ul.nav-links li a.butao {
+  background-color: #f39c12;
+  color: #222;
+  font-weight: 700;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+nav ul.nav-links li a.butao:hover,
+nav ul.nav-links li a.butao:focus {
+  background-color: #d87f00;
+  color: #fff;
+  outline: none;
+}
 .nav-links li a.active,
 .nav-links li a:hover {
   background-color: var(--cor-secundaria);
+  color: #fff;
 }
-
 .butao {
   background-color: var(--cor-secundaria);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   color: #fff !important;
 }
-
+.nav-links li a.butao {
+  background-color: var(--cor-secundaria);
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.nav-links li a.butao:hover {
+  background-color: #b22222;
+  color: #fff !important;
+}
+.nav-links li a.butao:hover {
+  background-color: #b22222;
+  color: #fff !important;
+}
 .menu-icon {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: #fff;
 }
-
 main {
   padding: 2rem 0;
 }
@@ -110,16 +156,20 @@ h1, h2 {
   color: var(--cor-primaria);
   margin-bottom: 1rem;
 }
-
 p, li {
   font-size: 1rem;
   line-height: 1.6;
+}
+ul { 
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1rem 1.5rem;
+  text-indent: 0;
 }
 
 section {
   margin-bottom: 2rem;
 }
-
 footer {
   background-color: var(--cor-primaria);
   color: #fff;
@@ -151,7 +201,6 @@ footer {
   gap: 1rem;
   justify-content: center;
 }
-
 body.dark-mode {
   background-color: var(--fundo-escuro);
   color: var(--texto-escuro);
@@ -165,7 +214,18 @@ body.dark-mode footer {
 body.dark-mode .nav-links li a,
 body.dark-mode .footer-links a,
 body.dark-mode .social-links a {
-  color: #f0f0f0;
+  color: var(--texto-escuro);
+}
+body.dark-mode .nav-links li a.butao {
+  background-color: var(--cor-secundaria);
+  color: #fff;
+}
+body.dark-mode .nav-links li a.butao:hover {
+  background-color: #b22222;
+  color: #fff;
+}
+body.dark-mode .logo {
+  background-color: var(--fundo-escuro);
 }
 
 @media (max-width: 768px) {
@@ -185,11 +245,11 @@ body.dark-mode .social-links a {
     display: block;
   }
 }
-
 .dark-mode-toggle {
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
 }
 
 .dark-mode-toggle input[type="checkbox"] {
@@ -198,7 +258,6 @@ body.dark-mode .social-links a {
   height: 0;
   position: absolute;
 }
-
 .switch {
   position: relative;
   display: inline-block;
@@ -227,7 +286,6 @@ body.dark-mode .social-links a {
   border-radius: 50%;
   transition: 0.4s;
 }
-
 input:checked + .switch .slider {
   background-color: #2196F3;
 }
@@ -235,10 +293,83 @@ input:checked + .switch .slider {
 input:checked + .switch .slider:before {
   transform: translateX(26px);
 }
-
 .slider.round {
   border-radius: 24px;
 }
 .slider.round:before {
   border-radius: 50%;
+}
+.hero-bg {
+  position: relative;
+  height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 70%, #fff 100%),
+    url('../img/formados.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+.hero-content {
+  color: white;
+  padding: 2rem;
+  max-width: 800px;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+.intro {
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+}
+.intro h2 {
+  font-size:  2.5rem;
+  margin-bottom:  1rem;
+}
+.intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+.quem-somos {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.quem-somos h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.quem-somos p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+.mapa {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.mapa h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.mapa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.mapa-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
 }
